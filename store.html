@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>XyrexMc Store</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="particles-js"></div>
+
+<nav>
+  <div class="logo">XyrexMc</div>
+</nav>
+
+<section class="order-section">
+
+  <h1>Enter Your IGN</h1>
+
+  <div class="ign-box">
+
+    <img
+      id="skinPreview"
+      src="https://mc-heads.net/avatar/Steve/100"
+    >
+
+    <input
+      type="text"
+      id="ignInput"
+      placeholder="Minecraft IGN"
+      oninput="updateSkin()"
+    >
+
+  </div>
+
+  <button onclick="showStore()">
+    CONTINUE
+  </button>
+
+  <div id="storeContent" style="display:none;">
+
+    <div class="cards">
+
+      <div class="card">
+
+        <h2>VIP</h2>
+
+        <p>$5</p>
+
+        <a href="https://discord.gg/9B5Mm7SCa" target="_blank">
+          <button>ORDER</button>
+        </a>
+
+      </div>
+
+      <div class="card">
+
+        <h2>MVP</h2>
+
+        <p>$10</p>
+
+        <a href="https://discord.gg/9B5Mm7SCa" target="_blank">
+          <button>ORDER</button>
+        </a>
+
+      </div>
+
+      <div class="card">
+
+        <h2>LEGEND</h2>
+
+        <p>$20</p>
+
+        <a href="https://discord.gg/9B5Mm7SCa" target="_blank">
+          <button>ORDER</button>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<script>
+
+particlesJS("particles-js", {
+
+  particles: {
+
+    number: {
+      value: 80
+    },
+
+    color: {
+      value: "#ff9900"
+    },
+
+    shape: {
+      type: "circle"
+    },
+
+    opacity: {
+      value: 0.5
+    },
+
+    size: {
+      value: 3
+    },
+
+    line_linked: {
+      enable: true,
+      distance: 150,
+      color: "#ff9900",
+      opacity: 0.4,
+      width: 1
+    },
+
+    move: {
+      enable: true,
+      speed: 3
+    }
+
+  }
+
+});
+
+function updateSkin(){
+
+  const ign =
+    document.getElementById("ignInput").value;
+
+  document.getElementById("skinPreview")
+    .src =
+    `https://mc-heads.net/avatar/${ign}/100`;
+
+}
+
+function showStore(){
+
+  const ign =
+    document.getElementById("ignInput").value;
+
+  if(ign.trim() === ""){
+    alert("Please enter your IGN");
+    return;
+  }
+
+  document.getElementById("storeContent")
+    .style.display = "block";
+
+}
+
+</script>
+
+</body>
+</html>
