@@ -2,161 +2,202 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>XyrexMc Store</title>
+<title>Store</title>
 
-  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+  margin:0;
+  font-family:Arial;
+  background:#0d0d0d;
+  color:white;
+  text-align:center;
+  overflow-x:hidden;
+}
+
+h1,h2{
+  color:white;
+}
+
+.ign-box{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:15px;
+  margin:20px;
+}
+
+.ign-box img{
+  width:90px;
+  border-radius:10px;
+  border:2px solid orange;
+}
+
+input{
+  padding:12px;
+  width:220px;
+  border:none;
+  border-radius:10px;
+}
+
+button{
+  padding:12px 25px;
+  margin-top:15px;
+  border:none;
+  border-radius:10px;
+  background:orange;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.cards{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+  margin-top:30px;
+}
+
+.card{
+  background:#111;
+  padding:20px;
+  width:200px;
+  border-radius:12px;
+  border:1px solid orange;
+}
+
+.card h2{
+  color:orange;
+}
+
+#storeContent, #rankSection{
+  display:none;
+}
+
+</style>
+
 </head>
 
 <body>
 
-<div id="particles-js"></div>
+<h1>🇪​​🇳​​🇹​​🇪​​🇷​ ​🇾​​🇴​​🇺​​🇷​ ​🇮​​🇳​ ​🇬​​🇦​​🇲​​🇪​ ​🇳​​🇦​​🇲​​🇪​</h1>
 
-<nav>
-  <div class="logo">XyrexMc</div>
-</nav>
+<div class="ign-box">
 
-<section class="order-section">
+<img id="skinPreview" src="https://mc-heads.net/avatar/Steve/100">
 
-  <h1>Enter Your IGN</h1>
+<input id="ignInput" type="text" placeholder="Minecraft IGN" oninput="updateSkin()">
 
-  <div class="ign-box">
+</div>
 
-    <img
-      id="skinPreview"
-      src="https://mc-heads.net/avatar/Steve/100"
-    >
+<button onclick="showStore()">CONTINUE</button>
 
-    <input
-      type="text"
-      id="ignInput"
-      placeholder="Minecraft IGN"
-      oninput="updateSkin()"
-    >
+<!-- STORE -->
+<div id="storeContent">
 
-  </div>
+<h2>Categories</h2>
 
-  <button onclick="showStore()">
-    CONTINUE
-  </button>
+<div class="cards">
 
-  <div id="storeContent" style="display:none;">
+<!-- COINS -->
+<div class="card">
+<h2>Coins</h2>
+<a href="mailto:nutsnuts755@gmail.com?subject=Coins Purchase&body=IGN:%0AItem: Coins">
+<button>ORDER</button>
+</a>
+</div>
 
-    <div class="cards">
+<!-- LIFESTEAL -->
+<div class="card">
+<h2>Lifesteal Ranks</h2>
+<button onclick="showRanks()">OPEN</button>
+</div>
 
-      <div class="card">
+</div>
 
-        <h2>VIP</h2>
+<!-- RANKS -->
+<div id="rankSection">
 
-        <p>$5</p>
+<h2>Lifesteal Ranks</h2>
 
-        <a href="https://discord.gg/9B5Mm7SCa" target="_blank">
-          <button>ORDER</button>
-        </a>
+<div class="cards">
 
-      </div>
+<div class="card">
+<h2>Hero</h2>
+<p>₹40 / $0.42</p>
+<a href="mailto:nutsnuts755@gmail.com?subject=Hero Rank&body=IGN:%0ARank: Hero">
+<button>ORDER</button>
+</a>
+</div>
 
-      <div class="card">
+<div class="card">
+<h2>MVP</h2>
+<p>₹80 / $0.83</p>
+<a href="mailto:nutsnuts755@gmail.com?subject=MVP Rank&body=IGN:%0ARank: MVP">
+<button>ORDER</button>
+</a>
+</div>
 
-        <h2>MVP</h2>
+<div class="card">
+<h2>Immortal</h2>
+<p>₹120 / $1.25</p>
+<a href="mailto:nutsnuts755@gmail.com?subject=Immortal Rank&body=IGN:%0ARank: Immortal">
+<button>ORDER</button>
+</a>
+</div>
 
-        <p>$10</p>
+<div class="card">
+<h2>Deadliest</h2>
+<p>₹180 / $2.08</p>
+<a href="mailto:nutsnuts755@gmail.com?subject=Deadliest Rank&body=IGN:%0ARank: Deadliest">
+<button>ORDER</button>
+</a>
+</div>
 
-        <a href="https://discord.gg/9B5Mm7SCa" target="_blank">
-          <button>ORDER</button>
-        </a>
+<div class="card">
+<h2>Legend</h2>
+<p>₹240 / $2.78</p>
+<a href="mailto:nutsnuts755@gmail.com?subject=Legend Rank&body=IGN:%0ARank: Legend">
+<button>ORDER</button>
+</a>
+</div>
 
-      </div>
+<div class="card">
+<h2>Beast</h2>
+<p>₹320 / $3.70</p>
+<a href="mailto:nutsnuts755@gmail.com?subject=Beast Rank&body=IGN:%0ARank: Beast">
+<button>ORDER</button>
+</a>
+</div>
 
-      <div class="card">
+</div>
 
-        <h2>LEGEND</h2>
-
-        <p>$20</p>
-
-        <a href="https://discord.gg/9B5Mm7SCa" target="_blank">
-          <button>ORDER</button>
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</div>
 
 <script>
 
-particlesJS("particles-js", {
-
-  particles: {
-
-    number: {
-      value: 80
-    },
-
-    color: {
-      value: "#ff9900"
-    },
-
-    shape: {
-      type: "circle"
-    },
-
-    opacity: {
-      value: 0.5
-    },
-
-    size: {
-      value: 3
-    },
-
-    line_linked: {
-      enable: true,
-      distance: 150,
-      color: "#ff9900",
-      opacity: 0.4,
-      width: 1
-    },
-
-    move: {
-      enable: true,
-      speed: 3
-    }
-
-  }
-
-});
-
 function updateSkin(){
-
-  const ign =
-    document.getElementById("ignInput").value;
-
-  document.getElementById("skinPreview")
-    .src =
-    `https://mc-heads.net/avatar/${ign}/100`;
-
+const ign = document.getElementById("ignInput").value;
+document.getElementById("skinPreview").src =
+`https://mc-heads.net/avatar/${ign}/100`;
 }
 
 function showStore(){
+const ign = document.getElementById("ignInput").value;
+if(ign.trim()===""){
+alert("Enter IGN");
+return;
+}
+document.getElementById("storeContent").style.display="block";
+}
 
-  const ign =
-    document.getElementById("ignInput").value;
-
-  if(ign.trim() === ""){
-    alert("Please enter your IGN");
-    return;
-  }
-
-  document.getElementById("storeContent")
-    .style.display = "block";
-
+function showRanks(){
+document.getElementById("rankSection").style.display="block";
 }
 
 </script>
